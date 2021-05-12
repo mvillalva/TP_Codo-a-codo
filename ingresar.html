@@ -32,16 +32,16 @@
         </header>
 
         <main>
-            <section class="login">
-                <div class="login__container">
-                    <div class="login__header">
+            <section class="login"> <!-- Flex -->
+                <div class="login__container"> <!-- Flex -->
+                    <div class="login__header"> <!-- Grid -->
                         <hr class="login__line" />
                         <h1 class="login__title">Acceso</h1>
                         <hr class="login__line" />
                     </div>
                     <div class="login__form">
-                        <div class="login__row">
-                            <div class="login__col login--inline">
+                        <div class="login__row"> <!-- Flex -->
+                            <div class="login__col login--inline"> <!-- Flex -->
                                 <input
                                     class="login__text"
                                     type="text"
@@ -52,8 +52,8 @@
                                 <i class="fa fa-user login__icon login__icon--Bg"></i>
                             </div>
                         </div>
-                        <div class="login__row">
-                            <div class="login__col login--inline login--icon-Bg">
+                        <div class="login__row"> <!-- Flex -->
+                            <div class="login__col login--inline login--icon-Bg"> <!-- Flex -->
                                 <input
                                     class="login__text"
                                     type="password"
@@ -64,8 +64,8 @@
                                 <i class="fa fa-key login__icon login__icon--Bg"></i>
                             </div>
                         </div>
-                        <div class="login__row">
-                            <div class="login__col login--center">
+                        <div class="login__row"> <!-- Flex -->
+                            <div class="login__col login--center"> <!-- Flex -->
                                 <button class="login__button" data-bs-toggle="modal" data-bs-target="#modalMessage">
                                     Ingresar
                                 </button>
@@ -77,8 +77,8 @@
         </main>
 
         <footer>
-            <div class="footer">
-                <div class="footer__container">
+            <div class="footer"> <!-- Flex -->
+                <div class="footer__container"> <!-- Flex -->
                     <a href="#." class="footer__icon footer--blue"><i class="footer__icon--text fab fa-facebook"></i></a>
                     <a href="#." class="footer__icon footer--lightblue"><i class="footer__icon--text fab fa-twitter"></i> </a>
                     <a href="#." class="footer__icon footer--gradient"><i class="footer__icon--text fab fa-instagram"></i></a>                
@@ -87,7 +87,7 @@
             </div>
         </footer>
 
-        <!-- Modal -->
+        <!-- Modal Bootstrap 5.0 -->
         <div class="modal fade" id="modalMessage" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
