@@ -38,6 +38,13 @@ body {
     --font-title-weight: 400;
 }
 
+ .body__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 .navi {
     position: fixed;
     display: flex;
@@ -258,7 +265,8 @@ body {
     align-items: center;
     background: var(--grisOscuro);    
     margin: 0;
-    height: 10rem;
+    height: 15vh;
+    min-height: 9.5rem;
 }
 
 .footer__container {
@@ -340,7 +348,7 @@ body {
 
 /*-----------------login-----------------*/
 .login {
-    height: 84.4vh;
+    height: 85vh;
     background-image: url("http://picsum.photos/1024/768");
     background-color: #cccccc;
     background-position: center;
