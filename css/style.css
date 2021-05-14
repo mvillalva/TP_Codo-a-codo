@@ -2,18 +2,18 @@
     --naranja: rgb(255, 123, 0);
     --naranjaClaro: rgb(250, 184, 62);
     --naranja70: rgba(224, 153, 0, 0.7);
-    --naranja85: rgba(224, 153, 0, 0.85);        
+    --naranja85: rgba(224, 153, 0, 0.85);
     --naranjaDegradado: linear-gradient(var(--naranjaClaro), var(--naranja));
     --negro70: rgba(0, 0, 0, 0.7);
     --negro60: rgba(0, 0, 0, 0.6);
     --negro50: rgba(0, 0, 0, 0.5);
     --grisIntenso: rgb(48, 48, 48);
     --grisOscuro: rgb(51, 51, 51);
-    --grisOscuro90: rgba(37, 37, 37, 0.9);    
+    --grisOscuro90: rgba(37, 37, 37, 0.9);
     --grisIntermedio: rgb(102, 102, 102);
     --grisClaro: rgb(173, 173, 173);
     --blanco85: rgba(255, 255, 255, 0.85);
-    --blanco70: rgba(255, 255, 255, 0.70);
+    --blanco70: rgba(255, 255, 255, 0.7);
     --blanco: rgb(255, 255, 255);
     --azul: rgb(6, 71, 192);
     --celeste: rgb(0, 178, 238);
@@ -54,7 +54,7 @@ body {
     font-weight: var(--font-title-weight);
     font-size: 3.5rem;
     padding: 10px 10px 20px 10px;
-    margin: 0;    
+    margin: 0;
 }
 
 .navi__logo--25 {
@@ -79,10 +79,10 @@ body {
     font-size: 1.6rem;
     background-color: var(--negro70);
     padding-inline-start: 0;
-    margin-top: 6rem;    
+    margin-top: 6rem;
     width: 100vw;
     right: -100vw;
-    transition: 400ms ease-in all;
+    transition: all 400ms ease-in;
 }
 
 .menu__item--select {
@@ -112,7 +112,7 @@ body {
 
 .navi--dark {
     background-color: var(--grisIntenso);
-    transition: 600ms ease all;
+    transition: background-color 600ms ease;
 }
 
 .mensaje {
@@ -166,8 +166,7 @@ body {
 .cards__container,
 .aboutus__container,
 .contacto__container,
-.gallery__container,
-.login__container {
+.gallery__container {
     display: flex;
     flex-direction: column;
     background-color: var(--grisIntenso);
@@ -180,8 +179,7 @@ body {
 .cards__header,
 .aboutus__header,
 .contacto__header,
-.gallery__header,
-.login__header {
+.gallery__header {
     display: grid;
     grid-template: 1fr / repeat(3, minmax(min-content, 33.33%));
     align-items: center;
@@ -192,19 +190,17 @@ body {
 .cards__line,
 .aboutus__line,
 .contacto__line,
-.gallery__line,
-.login__line {
+.gallery__line {
     width: 80%;
     background-color: var(--naranja);
     border: 1px solid var(--naranja);
-    border-radius: 5px;    
+    border-radius: 5px;
 }
 
 .cards__title,
 .aboutus__title,
 .contacto__title,
-.gallery__title,
-.login__title {
+.gallery__title {
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
     font-size: 3rem;
@@ -246,7 +242,7 @@ body {
     height: 100%;
 }
 
-.card__image--1 {    
+.card__image--1 {
     background-image: url("../img/Lupita.jpg");
     min-height: 100px;
     max-height: 180px;
@@ -285,7 +281,7 @@ body {
 .card__image--icon {
     font-size: 6rem;
     position: absolute;
-    color: var(--blanco70); 
+    color: var(--blanco70);
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -293,8 +289,9 @@ body {
 }
 
 .card__image--icon::before {
-    font-family: "Font Awesome 5 Free"; font-weight: 900;
-    content: "\f05a";    
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f05a";
 }
 
 .card__title {
@@ -370,17 +367,15 @@ body {
     color: var(--blanco);
 }
 
-.contacto__form,
-.login__form {
+.contacto__form {
     margin-bottom: 3vh;
     padding: 20px 0;
     border-radius: 10px;
-    background: var(--naranjaDegradado);    
+    background: var(--naranjaDegradado);
 }
 
 .contacto__row,
-.contacto__row-container,
-.login__row {
+.contacto__row-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -388,8 +383,7 @@ body {
     margin: 5px 10px 0 10px;
 }
 
-.contacto__col,
-.login__col {
+.contacto__col {
     display: flex;
     flex-direction: column;
     margin: 5px;
@@ -407,7 +401,7 @@ body {
     color: white;
 }
 
-.contacto__iframe {    
+.contacto__iframe {
     min-height: 200px;
     width: 90%;
     height: 100%;
@@ -418,15 +412,13 @@ body {
     border-color: var(--blanco85);
 }
 
-.contacto--center,
-.login--center {
+.contacto--center {
     align-items: center;
 }
 
 .contacto__area,
 .contacto__select,
-.contacto__text,
-.login__text {
+.contacto__text {
     border: 1px solid var(--grisClaro);
     border-radius: 5px;
     outline: none;
@@ -451,8 +443,7 @@ body {
     color: rgb(255, 0, 0);
 }
 
-.contacto__button,
-.login__button {
+.contacto__button {
     font-size: 1.6rem;
     text-align: center;
     width: 150px;
@@ -474,9 +465,7 @@ body {
 }
 
 .contacto__button:focus,
-.contacto__button:hover,
-.login__button:focus,
-.login__button:hover {
+.contacto__button:hover {
     border: 3px solod var(--naranja);
     background-color: var(--negro70);
 }
@@ -486,11 +475,7 @@ body {
 .contacto__text:focus,
 .contacto__area:hover,
 .contacto__select:hover,
-.contacto__text:hover,
-.login__text:focus,
-.login__text:hover,
-.login__text:focus + .login__icon--Bg,
-.login__text:hover + .login__icon--Bg {
+.contacto__text:hover {
     border-color: var(--naranja);
     box-shadow: 0 0 8px 0 var(--naranja);
 }
@@ -501,31 +486,31 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--grisOscuro);    
+    background: var(--grisOscuro);
     margin: 0;
     height: 10rem;
 }
 
 .footer__container {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     width: 150px;
 }
 
 .footer__icon {
     position: relative;
-    background-color: var(--blanco);    
+    background-color: var(--blanco);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    transition: all 500ms ease-in-out;    
+    transition: all 500ms ease-in-out;
 }
 
-.footer__icon--text {    
+.footer__icon--text {
     position: absolute;
     color: var(--grisOscuro);
     text-decoration: none;
-    font-size: 2.5rem;    
+    font-size: 2.5rem;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -539,7 +524,7 @@ body {
 
 .footer__icon:focus .footer__icon--text,
 .footer__icon:hover .footer__icon--text {
-    color: var(--blanco);    
+    color: var(--blanco);
 }
 
 .footer--blue:focus,
@@ -548,7 +533,7 @@ body {
 }
 
 .footer--lightblue:focus,
-.footer--lightblue:hover {    
+.footer--lightblue:hover {
     background-color: var(--celeste);
 }
 
@@ -564,15 +549,23 @@ body {
     --i-orange-1: rgb(247, 119, 55);
     --i-orange-2: rgb(252, 175, 69);
     --i-yellow: rgb(255, 220, 128);
-    
-    background: radial-gradient(circle farthest-corner at 35% 90%, var(--i-yellow), transparent 50%), 
-                radial-gradient(circle farthest-corner at 0 140%, var(--i-orange-1), transparent 50%), 
-                radial-gradient(ellipse farthest-corner at 0 -25%, var(--i-blue-1), transparent 50%), 
-                radial-gradient(ellipse farthest-corner at 20% -50%, var(--i-blue-2), transparent 50%), 
-                radial-gradient(ellipse farthest-corner at 100% 0, var(--i-violet), transparent 50%), 
-                radial-gradient(ellipse farthest-corner at 60% -20%, var(--i-fucsia), transparent 50%), 
-                radial-gradient(ellipse farthest-corner at 100% 100%, var(--i-pink), transparent), 
-                linear-gradient(var(--i-blue-1), var(--i-fucsia), var(--i-pink), 50%, var(--i-orange-1), 70%, var(--i-yellow) 100%);
+
+    background: radial-gradient(circle farthest-corner at 35% 90%, var(--i-yellow), transparent 50%),
+        radial-gradient(circle farthest-corner at 0 140%, var(--i-orange-1), transparent 50%),
+        radial-gradient(ellipse farthest-corner at 0 -25%, var(--i-blue-1), transparent 50%),
+        radial-gradient(ellipse farthest-corner at 20% -50%, var(--i-blue-2), transparent 50%),
+        radial-gradient(ellipse farthest-corner at 100% 0, var(--i-violet), transparent 50%),
+        radial-gradient(ellipse farthest-corner at 60% -20%, var(--i-fucsia), transparent 50%),
+        radial-gradient(ellipse farthest-corner at 100% 100%, var(--i-pink), transparent),
+        linear-gradient(
+            var(--i-blue-1),
+            var(--i-fucsia),
+            var(--i-pink),
+            50%,
+            var(--i-orange-1),
+            70%,
+            var(--i-yellow) 100%
+        );
 }
 
 /*--------------------- popup ---------------------*/
@@ -610,15 +603,16 @@ body {
     transition: all 600ms ease-in-out;
 }
 
-.popup--cerrar {    
+.popup--cerrar {
     transition: all 600ms;
-    cursor: default;    
-    cursor: pointer;    
+    cursor: default;
+    cursor: pointer;
 }
 
 .popup--cerrar::before {
-    font-family: "Font Awesome 5 Free"; font-weight: 900;
-    content: '\f057';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f057";
     font-size: 1.8rem;
 }
 
@@ -647,84 +641,21 @@ body {
     opacity: 1;
 }
 
-/*-----------------login-----------------*/
-.login {
-    height: 84.4vh;
-    background-image: url("http://picsum.photos/1024/768");
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
-}
-
-.login__container {
-    width: 75vw;
-    background-color: rgba(48, 48, 48, 0.7);
-}
-
-.login__title {
-    color: var(--blanco);
-}
-
-.login__form {
-    align-self: center;
-    width: 90%;
-    background: linear-gradient(rgba(250, 184, 62, 0.8), rgba(255, 123, 0, 0.8));
-}
-
-.login--inline {
-    display: inline-block;
-    position: relative;
-    margin: auto;
-}
-
-.login__text {
-    margin: 8px 0;
-    outline: none;
-    padding: 8px;
-    transition: 0.3s;
-    padding-left: 45px;
-    width: 100%;
-}
-
-.login__icon {
-    position: absolute;
-    text-align: center;
-    color: var(--grisClaro);
-    top: 8px;
-    width: 30px;
-    height: 30px;
-    left: 0;
-    font-size: 1.2rem;
-    transition: 0.3s;
-}
-
-.login__icon--Bg {
-    background-color: var(--naranja85);
-    color: #fff;
-    padding: 12px 4px;
-    border-radius: 5px 0 0 5px;
-}
-
 /*--------------------- gallery ------------------------*/
 .gallery {
-  background-color: var(--negro50);
+    background-color: var(--negro50);
 }
 
 .gallery__container-items {
-    display: grid;    
-    grid-template: repeat(4, 300px) / repeat(auto-fit, minmax(200px, 1fr));    
-    grid-gap: 5px;    
+    display: grid;
+    grid-template: repeat(4, 300px) / repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
     align-items: center;
     justify-content: center;
     grid-auto-flow: dense;
     grid-auto-rows: 300px;
     padding: 1rem;
-    width: 90%;    
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -733,10 +664,10 @@ body {
     height: 100%;
     display: grid;
     grid-template: 1fr 40px 40px / 1fr;
-    align-items: center;    
+    align-items: center;
     background-color: var(--blanco);
     border-radius: 10px;
-    border: 1px solid var(--naranja70);    
+    border: 1px solid var(--naranja70);
     overflow: hidden;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -744,11 +675,11 @@ body {
 
 .gallery__item-img {
     width: 100%;
-    height: 100%;    
+    height: 100%;
     box-shadow: 0 3px 5px var(--negro70);
 }
 
-.gallery__item-img--1 {    
+.gallery__item-img--1 {
     background: url("http://picsum.photos/300/200");
     background-repeat: no-repeat;
     background-size: cover;
@@ -810,7 +741,7 @@ body {
 }
 
 .gallery__item-title {
-    color: var(--naranja);    
+    color: var(--naranja);
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
     font-size: 2rem;
@@ -830,13 +761,6 @@ body {
         justify-content: space-evenly;
     }
 
-    .cards__line,
-    .aboutus__line,
-    .contacto__line,
-    .login__line {
-        --width: 18%;
-    }
-
     .card {
         width: 48%;
     }
@@ -848,7 +772,7 @@ body {
     .card__image--1,
     .card__image--2,
     .card__image--3,
-    .card__image--4, 
+    .card__image--4,
     .card__image--5,
     .card__image--6 {
         max-height: 165px;
@@ -864,14 +788,10 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
-        
+
     .popup__container {
         width: 55%;
     }
-
-    .login__container {
-        width: 50vw;
-    }    
 }
 
 @media only screen and (min-width: 768px) {
@@ -908,7 +828,7 @@ body {
         border-radius: 20px;
         transition: color 0.24s ease, background-color 0.24s ease;
     }
-    
+
     .menu__item:hover {
         background: var(--grisIntermedio);
         color: var(--blanco);
@@ -931,20 +851,13 @@ body {
 
     .menu_link--fav {
         color: var(--naranja);
-    }    
+    }
 
     .banner__subtitle {
         display: block;
         letter-spacing: 1.5px;
         font-size: 2rem;
         text-align: center;
-    }
-
-    .cards__line,
-    .aboutus__line,
-    .contacto__line,
-    .login__line {
-        --width: 30%;
     }
 
     .card {
@@ -994,15 +907,13 @@ body {
 
     .contacto__area,
     .contacto__select,
-    .contacto__text,
-    .login__text {
+    .contacto__text {
         border-radius: 5px;
         outline: none;
         background-color: var(--blanco);
     }
 
-    .contacto--fontsize,
-    .login--fontsize {
+    .contacto--fontsize {
         font-size: 1.6rem;
     }
 
@@ -1013,16 +924,12 @@ body {
     .contacto__container--size {
         width: 60vw;
     }
-
-    .login__container {
-        width: 350px;
-    }    
-}    
+}
 
 @media only screen and (min-width: 1024px) {
     .navi__link {
         font-size: 1.6rem;
-    }    
+    }
 
     .banner__title {
         font-size: 6rem;
@@ -1081,8 +988,8 @@ body {
         margin-right: 5px;
     }
 
-    .contacto__iframe { 
-        width: 100%;      
+    .contacto__iframe {
+        width: 100%;
         border-style: solid;
         border-width: 2px;
         border-radius: 10px;
@@ -1092,7 +999,7 @@ body {
 
     .popup__container {
         width: 46%;
-    }    
+    }
 
     .gallery__container-items {
         grid-template: repeat(4, minmax(100px, 200px)) / repeat(auto-fill, minmax(300px, 1fr));
@@ -1107,16 +1014,15 @@ body {
     .gallery__item-paragraph {
         display: none;
     }
-    
+
     .gallery__item:hover {
         grid-template: 1fr 40px 40px / 1fr;
     }
 
     .gallery__item:hover .gallery__item-title,
     .gallery__item:hover .gallery__item-paragraph {
-        display: initial;        
+        display: initial;
     }
-
 }
 
 @media (min-width: 1280px) {
