@@ -1114,7 +1114,7 @@ body {
 
     .gallery__item:hover .gallery__item-title,
     .gallery__item:hover .gallery__item-paragraph {
-        display: inherit;        
+        display: initial;        
     }
 
 }
