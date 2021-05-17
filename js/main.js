@@ -52,12 +52,14 @@ window.addEventListener('scroll', function() {
         logo.classList.remove("navi__logo--0");
         logo.classList.add("navi__logo--25");
         nav.classList.remove("navi--dark");
+        nav.classList.remove("navi--shadow");
         menu.classList.remove("navi--dark");
     }
     else{
         logo.classList.add("navi__logo--0");
         logo.classList.remove("navi__logo--25");        
         nav.classList.add("navi--dark");
+        nav.classList.add("navi--shadow");
         menu.classList.add("navi--dark");
 
         let mnu_inicio      = document.getElementById("mnu_inicio"),
