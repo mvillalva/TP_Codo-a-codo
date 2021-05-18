@@ -759,6 +759,60 @@ body {
     margin: 0.5rem;
 }
 
+@keyframes wave {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.5, 1.05, 1.05);
+        transform: scale3d(1.5, 1.05, 1.05);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.5, 1.05);
+    }
+
+    80% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.5);
+        transform: scale3d(1.05, 1.05, 1.5);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes wave2 {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.5, 1.05, 1.05);
+        transform: scale3d(1.5, 1.05, 1.05);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.5, 1.05);
+    }
+
+    80% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.5);
+        transform: scale3d(1.05, 1.05, 1.5);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
 .button-up {
     position: fixed;
     display: flex;
@@ -772,11 +826,15 @@ body {
     border-radius: 50% 50% 0 0;
     z-index: 100;
     transition: height 300ms ease-in-out;
+    animation-name: wave;
+    animation-duration: 800ms;
 }
 
 .button-up:hover {
     background-color: var(--naranja70);
     height: 60px;
+    animation-name: wave2;
+    animation-duration: 800ms;
 }
 
 .button-up a {
@@ -791,8 +849,8 @@ body {
     opacity: 60%;
 }
 
-.button-up--none {    
-    display: none;    
+.button-up--none {
+    display: none;
 }
 
 /*--------------------- pantallas ---------------------*/
