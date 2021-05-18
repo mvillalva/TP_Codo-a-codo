@@ -1,12 +1,14 @@
 :root {
     --naranja: rgb(255, 123, 0);
     --naranjaClaro: rgb(250, 184, 62);
+    --naranja20: rgba(224, 153, 0, 0.3);
     --naranja70: rgba(224, 153, 0, 0.7);
     --naranja85: rgba(224, 153, 0, 0.85);
     --naranjaDegradado: linear-gradient(var(--naranjaClaro), var(--naranja));
     --negro70: rgba(0, 0, 0, 0.7);
     --negro60: rgba(0, 0, 0, 0.6);
     --negro50: rgba(0, 0, 0, 0.5);
+    --negro30: rgba(0, 0, 0, 0.3);
     --grisIntenso: rgb(48, 48, 48);
     --grisOscuro: rgb(51, 51, 51);
     --grisOscuro90: rgba(37, 37, 37, 0.9);
@@ -111,11 +113,11 @@ body {
 }
 
 .navi--dark {
-    background-color: var(--grisIntenso);    
+    background-color: var(--grisIntenso);
 }
 
 .navi--shadow {
-    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.4);    
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.4);
 }
 
 .mensaje {
@@ -755,6 +757,42 @@ body {
     color: var(--naranja);
     font-size: 1.6rem;
     margin: 0.5rem;
+}
+
+.button-up {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+    bottom: 0;
+    color: var(--blanco);
+    background-color: var(--negro50);
+    border-radius: 50% 50% 0 0;
+    z-index: 100;
+    transition: height 300ms ease-in-out;
+}
+
+.button-up:hover {
+    background-color: var(--naranja70);
+    height: 60px;
+}
+
+.button-up a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    opacity: 60%;
+}
+
+.button-up--none {    
+    display: none;    
 }
 
 /*--------------------- pantallas ---------------------*/

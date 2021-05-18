@@ -3,7 +3,8 @@ let width       = 0,
     nav_button  = document.getElementById("navi__button"),
     items       = document.getElementsByClassName('menu__item'),
     menu        = document.getElementById("menu"),
-    logo        = document.getElementById("logo");
+    logo        = document.getElementById("logo"),
+    button      = document.getElementById("button-up");
 
  width = (window.innerWidth < 768? 55:window.innerWidth >= 768 && window.innerWidth < 1024? 65:60);
 
@@ -45,6 +46,19 @@ for (var j = 0; j < scrolls.length; j++)
     });
 }
 
+(function(){    
+    button.classList.add("button-up--none");
+})();
+
+window.onresize = function(){
+    if(window.innerWidth < 768 && document.documentElement.scrollTop !== 0){
+        button.classList.remove("button-up--none");
+    }
+    else {
+        button.classList.add("button-up--none");
+    }
+};
+
 //función para cambiar clases y la selección del item menú según la posición en pantalla
 window.addEventListener('scroll', function() {
         
@@ -54,6 +68,7 @@ window.addEventListener('scroll', function() {
         nav.classList.remove("navi--dark");
         nav.classList.remove("navi--shadow");
         menu.classList.remove("navi--dark");
+        button.classList.add("button-up--none");
     }
     else{
         logo.classList.add("navi__logo--0");
@@ -61,6 +76,12 @@ window.addEventListener('scroll', function() {
         nav.classList.add("navi--dark");
         nav.classList.add("navi--shadow");
         menu.classList.add("navi--dark");
+        if(window.innerWidth < 768){
+            button.classList.remove("button-up--none");
+        }
+        else {
+            button.classList.add("button-up--none");
+        }
 
         let mnu_inicio      = document.getElementById("mnu_inicio"),
             mnu_destacados  = document.getElementById("mnu_destacados"),
