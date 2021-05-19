@@ -37,26 +37,26 @@ body {
     font-weight: 300;
 
     --font-title: "Fredericka the Great", cursive;
-    --font-title-weight: 400;
+    --font-title-weight: 400;    
 }
 
 .navi {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: var(--negro50);
     width: 100vw;
     height: 6rem;
-    z-index: 100;
+    background-color: var(--negro50);    
     transition: 600ms ease all;
+    z-index: 100;
 }
 
 .navi__logo {
+    margin: 0;
+    padding: 10px 10px 20px 10px;
+    font-size: 3.5rem;
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
-    font-size: 3.5rem;
-    padding: 10px 10px 20px 10px;
-    margin: 0;
 }
 
 .navi__logo--25 {
@@ -71,19 +71,19 @@ body {
 }
 
 .navi__button {
-    font-size: 2.4rem;
     align-self: flex-start;
     margin: 1rem 2.4rem 1rem 1rem;
+    font-size: 2.4rem;
 }
 
 .menu {
-    position: absolute;
-    font-size: 1.6rem;
-    background-color: var(--negro70);
-    padding-inline-start: 0;
-    margin-top: 6rem;
+    position: absolute;    
     width: 100vw;
     right: -100vw;
+    padding-inline-start: 0;
+    margin-top: 6rem;
+    font-size: 1.6rem;
+    background-color: var(--negro70);    
     transition: all 400ms ease-in;
 }
 
@@ -93,9 +93,9 @@ body {
 
 .menu__item {
     display: block;
-    list-style: none;
-    text-align: center;
     padding: 0.9rem;
+    text-align: center;
+    list-style: none;    
 }
 
 .menu__item:hover {
@@ -108,8 +108,8 @@ body {
 }
 
 .menu__active {
-    transition: 400ms ease-in all;
     right: 0;
+    transition: 400ms ease-in all;
 }
 
 .navi--dark {
@@ -130,28 +130,28 @@ body {
 
 /*--------------------- Banner ---------------------*/
 .banner {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;    
     background-color: #cccccc;
     background-image: url(../img/bg_banner.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-attachment: fixed;    
 }
 
 .banner__container {
-    background-color: var(--negro50);
     width: 100vw;
+    background-color: var(--negro50);
 }
 
 .banner__title {
+    font-size: 3.2rem;
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
     letter-spacing: 1.5px;
-    font-size: 3.2rem;
     text-align: center;
 }
 
@@ -173,12 +173,12 @@ body {
 .contacto__container,
 .gallery__container {
     display: flex;
-    flex-direction: column;
-    background-color: var(--grisIntenso);
-    border-radius: 10px;
     width: 90vw;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    background-color: var(--grisIntenso);
+    border-radius: 10px;
 }
 
 .cards__header,
@@ -206,9 +206,9 @@ body {
 .aboutus__title,
 .contacto__title,
 .gallery__title {
+    font-size: 3rem;
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
-    font-size: 3rem;
 }
 
 .card__container {
@@ -225,70 +225,70 @@ body {
     width: 85%;
     height: 340px;
     padding: 15px;
+    margin-bottom: 10px;
     border-radius: 10px;
     overflow: hidden;
     background: var(--naranjaDegradado);
-    margin-bottom: 10px;
 }
 
 .card__image-link {
-    border-radius: 10px;
-    border: 3px solid var(--naranja);
-    overflow: hidden;
     width: 100%;
     height: 55%;
     margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid var(--naranja);
 }
 
 .card__image {
     position: relative;
+    height: 100%;
     background-position: center;
     background-size: cover;
-    height: 100%;
 }
 
 .card__image--1 {
-    background-image: url("../img/Lupita.jpg");
     min-height: 100px;
     max-height: 180px;
+    background-image: url("../img/Lupita.jpg");
 }
 
 .card__image--2 {
-    background-image: url("../img/sullivan-s.jpg");
     min-height: 100px;
     max-height: 180px;
+    background-image: url("../img/sullivan-s.jpg");
 }
 
 .card__image--3 {
-    background-image: url("../img/Los_Chanchitos.jpg");
     min-height: 100px;
     max-height: 180px;
+    background-image: url("../img/Los_Chanchitos.jpg");
 }
 
 .card__image--4 {
-    background-image: url("http://picsum.photos/300/200");
     min-height: 100px;
     max-height: 180px;
+    background-image: url("http://picsum.photos/300/200");
 }
 
 .card__image--5 {
-    background-image: url("http://picsum.photos/310/210");
     min-height: 100px;
     max-height: 180px;
+    background-image: url("http://picsum.photos/310/210");
 }
 
 .card__image--6 {
-    background-image: url("http://picsum.photos/304/204");
     min-height: 100px;
     max-height: 180px;
+    background-image: url("http://picsum.photos/304/204");
 }
 
 .card__image--icon {
-    font-size: 6rem;
     position: absolute;
-    color: var(--blanco70);
     top: 50%;
     left: 50%;
+    font-size: 6rem;
+    color: var(--blanco70);
     transform: translateX(-50%) translateY(-50%);
     transition: all 600ms ease-in-out;
 }
@@ -300,17 +300,17 @@ body {
 }
 
 .card__title {
+    margin: 0;
     align-self: flex-start;
+    font-size: 2.4rem;
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
-    font-size: 2.4rem;
-    margin: 0;
 }
 
 .card__paragraph {
-    white-space: pre-line;
-    font-size: 1.6rem;
     margin: 0 auto;
+    font-size: 1.6rem;
+    white-space: pre-line;
 }
 
 /*--------------------- nosotros ---------------------*/
@@ -329,13 +329,13 @@ body {
 .aboutus__image {
     position: relative;
     align-self: center;
+    width: 90%;
+    height: 200px;
     background-image: url("https://picsum.photos/1100/300");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-    width: 90%;
-    height: 200px;
     box-shadow: 0 0 20px black;
 }
 
@@ -347,15 +347,15 @@ body {
 }
 
 .aboutus__subtitle {
-    color: var(--grisIntenso);
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
     font-size: 2rem;
+    color: var(--grisIntenso);
 }
 
 .aboutus__text {
-    color: var(--grisIntenso);
     font-size: 1.6rem;
+    color: var(--grisIntenso);
 }
 
 /*--------------------- contacto ---------------------*/
@@ -384,8 +384,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
     margin: 5px 10px 0 10px;
+    text-align: left;
 }
 
 .contacto__col {
@@ -396,9 +396,9 @@ body {
 
 .contacto__paragraph {
     padding-bottom: 5px;
-    color: var(--blanco);
     font-size: 1.6rem;
     font-weight: 300;
+    color: var(--blanco);
 }
 
 .contacto__link {
@@ -424,13 +424,13 @@ body {
 .contacto__area,
 .contacto__select,
 .contacto__text {
+    height: 30px;
+    font-size: 1.6rem;
+    color: var(--grisIntenso);
+    background-color: var(--blanco);
     border: 1px solid var(--grisClaro);
     border-radius: 5px;
     outline: none;
-    background-color: var(--blanco);
-    color: var(--grisIntenso);
-    font-size: 1.6rem;
-    height: 30px;
 }
 
 .contacto__area {
@@ -438,9 +438,9 @@ body {
 }
 
 .contacto__label {
+    font-size: 1.6rem;
     text-align: left;
     color: var(--blanco);
-    font-size: 1.6rem;
 }
 
 .contacto__label--req::after {
@@ -449,17 +449,17 @@ body {
 }
 
 .contacto__button {
-    font-size: 1.6rem;
-    text-align: center;
     width: 150px;
     margin: 10px 10px;
     padding: 10px;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
     background-color: var(--negro50);
     border: 3px solod var(--grisIntermedio);
     border-radius: 20px;
-    text-decoration: none;
-    transition: all 500ms ease-in-out;
     cursor: pointer;
+    transition: all 500ms ease-in-out;
 }
 
 .contacto__area:disabled,
@@ -491,9 +491,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--grisOscuro);
     margin: 0;
     height: 10rem;
+    background: var(--grisOscuro);
 }
 
 .footer__container {
@@ -504,20 +504,20 @@ body {
 
 .footer__icon {
     position: relative;
-    background-color: var(--blanco);
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background-color: var(--blanco);
     transition: all 500ms ease-in-out;
 }
 
 .footer__icon--text {
     position: absolute;
-    color: var(--grisOscuro);
-    text-decoration: none;
-    font-size: 2.5rem;
     top: 50%;
     left: 50%;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--grisOscuro);
     transform: translateX(-50%) translateY(-50%);
     transition: all 500ms ease-in-out;
 }
@@ -576,20 +576,18 @@ body {
 /*--------------------- popup ---------------------*/
 .popup {
     position: fixed;
+    top: 0;    
+    left: 0;    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
     height: 100vh;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: var(--negro70);
-    transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    transition: opacity 500ms;
     z-index: 1000;
 }
 
@@ -601,10 +599,10 @@ body {
     width: 85%;
     height: 75%;
     padding: 10px 10px 18px 10px;
+    overflow-y: auto;
     border-radius: 15px;
     box-shadow: 0 0 5px var(--grisClaro);
     background: var(--grisOscuro90);
-    overflow-y: auto;
     transition: all 600ms ease-in-out;
 }
 
@@ -615,10 +613,10 @@ body {
 }
 
 .popup--cerrar::before {
+    font-size: 1.8rem;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f057";
-    font-size: 1.8rem;
 }
 
 .popup__iframe {
@@ -632,9 +630,9 @@ body {
 
 .popup__text,
 .popup__link {
-    color: var(--naranja);
-    text-decoration: none;
     font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--naranja);
 }
 
 .popup__icon {
@@ -659,8 +657,8 @@ body {
     justify-content: center;
     grid-auto-flow: dense;
     grid-auto-rows: 300px;
-    padding: 1rem;
     width: 90%;
+    padding: 1rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -670,10 +668,10 @@ body {
     display: grid;
     grid-template: 1fr 40px 40px / 1fr;
     align-items: center;
+    overflow: hidden;
     background-color: var(--blanco);
     border-radius: 10px;
     border: 1px solid var(--naranja70);
-    overflow: hidden;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 }
@@ -746,17 +744,17 @@ body {
 }
 
 .gallery__item-title {
-    color: var(--naranja);
+    margin: 0.5rem;
+    font-size: 2rem;
     font-family: var(--font-title);
     font-weight: var(--font-title-weight);
-    font-size: 2rem;
-    margin: 0.5rem;
+    color: var(--naranja);
 }
 
 .gallery__item-paragraph {
-    color: var(--naranja);
-    font-size: 1.6rem;
     margin: 0.5rem;
+    font-size: 1.6rem;
+    color: var(--naranja);
 }
 
 @keyframes wave {
@@ -824,7 +822,6 @@ body {
     color: var(--blanco);
     background-color: var(--negro50);
     border-radius: 50% 50% 0 0;
-    z-index: 100;
     transition: height 300ms ease-in-out;
     animation-name: wave;
     animation-duration: 800ms;
@@ -838,13 +835,13 @@ body {
 }
 
 .button-up a {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    position: relative;
     width: 100%;
     height: 50px;
+    font-size: 1.5rem;    
     text-align: center;
     opacity: 60%;
 }
@@ -910,20 +907,20 @@ body {
 
     .menu {
         position: initial;
+        right: 0;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: transparent;
         padding-right: 20px;
         margin-top: initial;
-        right: 0;
+        background-color: transparent;
     }
 
     .menu__item {
-        background-color: initial;
         margin-right: 5px;
         padding-left: 10px;
         padding-right: 10px;
+        background-color: initial;
         border-radius: 20px;
         transition: color 0.24s ease, background-color 0.24s ease;
     }
@@ -934,9 +931,9 @@ body {
     }
 
     .menu__link {
+        display: initial;
         font-size: 1.6rem;
         font-weight: 600;
-        display: initial;
     }
 
     .menu__item--select {
@@ -954,8 +951,8 @@ body {
 
     .banner__subtitle {
         display: block;
-        letter-spacing: 1.5px;
         font-size: 2rem;
+        letter-spacing: 1.5px;
         text-align: center;
     }
 
@@ -1007,8 +1004,8 @@ body {
     .contacto__area,
     .contacto__select,
     .contacto__text {
-        border-radius: 5px;
         outline: none;
+        border-radius: 5px;
         background-color: var(--blanco);
     }
 
@@ -1026,10 +1023,10 @@ body {
 
     .button-up,
     .button-up:hover {        
-        width: 50px;
-        height: 50px;
         bottom: 10px;
         right: 10px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
     }
 }
@@ -1077,8 +1074,8 @@ body {
     .contacto__row-container {
         display: flex;
         flex-direction: row;
-        color: white;
         justify-content: space-around;
+        color: white;
     }
 
     .contacto__col--mb3 {
@@ -1098,11 +1095,11 @@ body {
 
     .contacto__iframe {
         width: 100%;
+        align-self: flex-start;
         border-style: solid;
         border-width: 2px;
         border-radius: 10px;
         border-color: var(--blanco85);
-        align-self: flex-start;
     }
 
     .popup__container {
